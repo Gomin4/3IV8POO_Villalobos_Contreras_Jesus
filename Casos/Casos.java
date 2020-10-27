@@ -14,7 +14,7 @@ class casos{
         Scanner comienzo = new Scanner(System.in);
         //variables
         long factorial=1;
-        int  opcion, num, seleccion, derecho,edad,socios,ene,x, y, valorfinal;
+        int  opcion, num, seleccion, derecho,edad,socios,ene;
         int positivos = 0;
         int negativos = 0;
         int total = 0;
@@ -23,7 +23,7 @@ class casos{
         int totalnum;
         char letra,operador;
         //char es el tipo de dato y letra es el nombre de la variable
-        double resultado,base, altura, radio, area, perimetro, temperatura,valor,abono,teclado, mouse, producto,leer;
+        double resultado,base, altura, radio, area, perimetro, temperatura,valor,abono,teclado, mouse, producto,leer, x, y,valorfinal;
     do{
         //el cuerpo del programa
         System.out.println("Elija la opcion deseada: ");
@@ -260,14 +260,14 @@ class casos{
                 break;
             case 9:
             System.out.print("Ingresar primer numero: ");
-            x = entrada.nextInt();
+            x = entrada.nextDouble();
             System.out.print("Ingresar segundo numero: ");
-            y = entrada.nextInt();
+            y = entrada.nextDouble();
             System.out.print("Ingresar operador(-,+,*,/):" );
             operador = entrada.next().charAt(0);
             switch(operador)
             {
-            case '-':
+            case '-s:
                     valorfinal = x-y;
                     System.out.println("La resta es:"  + valorfinal);
                     break;
