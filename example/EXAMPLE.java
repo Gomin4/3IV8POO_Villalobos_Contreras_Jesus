@@ -1,46 +1,50 @@
 import java.util.Scanner;
+ 
+public class Example {
+ 
+    public static void Example(String[]args){
 
-    public class EXAMPLE {
-    public static void main(String[] args) 
-    {
-        Scanner entrada = new Scanner(System.in);
-        char operador;
-        int x, y, valorfinal;
-         System.out.print("Ingresar primer numero: ");
-        x = entrada.nextInt();
-        System.out.print("Ingresar segundo numero: ");
-        y = entrada.nextInt();
-        System.out.print("Ingresar operador(-,+,*,/):" );
-        operador = entrada.next().charAt(0);
-        switch(operador)
-        {
-        case '-':
-                valorfinal = x-y;
-                System.out.println("La resta es:"  + valorfinal);
-                break;
-        case '+':
-                valorfinal = x+y;
-                System.out.println("La suma es: " + valorfinal);
-                break;
-        case '*':
-                valorfinal = x*y;
-                System.out.println("La multiplicación es: "  + valorfinal);
-                break;
-        case '/':
-                if(y!=0)
-                {
-                    valorfinal = x/y;
-                    System.out.println("La división es :" + valorfinal);
-                }
-                else
-                System.out.println("no se puede dividir entre cero");
-                break;
-                default:
-                System.out.println("resultado no valido");
+
+        Scanner entrada = new Scanner (System.in);
+        
+        int matriza[][] = new int [3][3];
+        int matrizb[][] = new int [3][3];
+        int matrizs[][] = new int [3][3];
+        int i, j;
+        
+        //Lectura de datos de la matriz «A».
+        System.out.println("Datos de la matriz A.");
+        for (i = 0; i <= 2; i++){
+            for (j = 0; j <= 2; j++){
+                System.out.print("Escribir el valor de [" + i + "] [" + j + "]: ");
+                matriza [i][j] = entrada.nextInt();
             }
         }
-    }
-                                          
-               
         
-
+        //Lectura de datos de la matriz «B».
+        System.out.println("\nDatos de la matriz B.");
+        for (i = 0; i <= 2; i++){
+            for (j = 0; j <= 2; j++){
+                System.out.print("Escribir el valor de [" + i + "] [" + j + "]: ");
+                matrizb[i][j] = entrada.nextInt();
+            }
+        }
+            
+        //Asignar valores para la matriz «S».
+        for (i = 0; i <= 2; i++){
+            for (j = 0; j <= 2; j++){
+                 matrizs [i][j] = matriza[i][j] + matrizb[i][j];
+            }
+        }
+        
+        //Imprimir resultados.
+        System.out.println("Matriz resultante de la suma:");
+        for (i = 0; i <= 2; i++){
+            for (j = 0; j <= 2; j++) {
+                System.out.print(matrizs[i][j] + " ");
+            }
+            
+        System.out.println("");
+        }
+    }
+}
